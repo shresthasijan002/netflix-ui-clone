@@ -1,0 +1,339 @@
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+/* css variables */
+:root {
+    /* for fonts */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Martel Sans', sans-serif;
+    /* font size  */
+    --font-xs: 0.875rem;
+    --font-sm: 1rem;
+    --font-md: 1.2rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2.5rem;
+    --font-xxl: 3rem;
+
+    /* for text color */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-darkoverlay: rgba(0, 0, 0, 0.65);
+    --color-light-background: rgba(0, 0, 0, 0.5);
+    --color-line: #333;
+    --color-box: #2d2d2d;
+    --color-boxhover: #414141;
+    --color-red: red;
+    --color-border: rgba(255, 255, 255, 0.4);
+    /* paddings */
+    --padding-section: 60px 5%;
+    --padding-btn: 8px 16px;
+    --padding-btn-lg: 12px 24px;
+    --border-radius: 4px;
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+
+}
+
+body {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+/* header */
+
+.header {
+    height: 90vh;
+    background-image: url(/images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-darkoverlay);
+    z-index: 1;
+
+}
+
+/* navbar */
+.navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+}
+
+.navbarlogo img {
+    width: 155px;
+}
+
+.navbarright {
+    display: flex;
+    gap: 10px;
+
+}
+
+.btn {
+    padding: var(--padding-btn);
+    font-size: var(--font-xs);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-white);
+    background: var(--color-light-background);
+    color: var(--color-white);
+    cursor: pointer;
+
+}
+
+.btn-signin {
+    background: var(--color-red);
+    border: none;
+    font-weight: 500;
+}
+
+/* banner section */
+.banner {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    text-align: center;
+    padding: 0 20px 60px;
+}
+
+.title {
+    font-family: var(--font-secondary);
+    font-size: var(--font-xxl);
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: var(--font-lg);
+    margin-top: 1rem;
+
+}
+
+.description {
+    font-size: var(--font-md);
+    margin: 1rem 0;
+
+}
+
+.form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.emailinput {
+    padding: 12px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: rgba(23, 23, 23, 0.7);
+    color: var(--color-white);
+    font-size: 16px;
+
+
+}
+
+.btn-getstarted {
+    background: var(--color-red);
+    padding: var(--padding-btn-lg);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    cursor: pointer;
+
+}
+
+/* divider section */
+.divider {
+    height: 7px;
+    background: var(--color-line);
+    width: 100%;
+}
+
+/* watching tv  */
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-section);
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.text {
+    flex: 1;
+    min-width: 300px;
+
+}
+
+.text h1 {
+    font-size: var(--font-xl);
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    font-size: var(--font-md);
+    line-height: 1.5;
+
+
+}
+
+.media {
+    flex: 1;
+    position: relative;
+    min-width: 300px;
+}
+
+.feature .media img {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+
+}
+
+.feature .media video {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    width: 73%;
+    z-index: 0;
+}
+
+/* offline download */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* frequently asked questions */
+.faq {
+    margin-bottom: 40px;
+}
+
+.faq h2 {
+    margin: 20px;
+    text-align: center;
+
+}
+
+.faq-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    margin: 10px auto;
+    border: var(--color-border);
+    background: var(--color-box);
+    padding: 10px;
+    gap: 10px;
+    border: var(--color-border);
+    cursor: pointer;
+
+}
+
+.faq-box .question {
+    font-size: var(--font-xs);
+    font-family: var(--font-primary);
+
+
+}
+
+/* footer */
+.footer {
+    padding: var(--padding-section);
+    background: var(--color-black);
+    color: var(--color-white);
+
+}
+
+.footer .contact {
+    margin-bottom: 30px;
+    font-size: var(--font-sm);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, fr));
+    gap: 30px;
+
+}
+
+.footer .links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer .columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, fr));
+    gap: 16px;
+}
+
+.footer a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: var(--font-xs);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* media queries for responsive */
+@media (max-width:768px) {
+    .banner .title {
+        font-size: var(--font-lg);
+
+    }
+
+    .banner .subtitle {
+        font-size: var(--font-sm);
+    }
+
+    .btn-getstarted {
+        font-size: var(--font-sm);
+        padding: 10px 20px;
+
+    }
+
+    .feature {
+
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .feature .media video {
+        position: absolute;
+        top: 15%;
+        left: 12%;
+        width: 75%;
+    }
+
+}
